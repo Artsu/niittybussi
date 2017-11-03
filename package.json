@@ -1,0 +1,27 @@
+{
+  "name": "niittybussi",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-client": "^2.0.1",
+    "apollo-client-preset": "^1.0.1",
+    "convert-seconds": "^1.0.1",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "left-pad": "^1.1.3",
+    "react": "^16.0.0",
+    "react-apollo": "^2.0.0",
+    "react-dom": "^16.0.0",
+    "react-dynamic-modal": "^1.1.1",
+    "react-live-clock": "^2.0.1",
+    "react-scripts": "1.0.16",
+    "react-window-size": "^1.0.1",
+    "rodal": "^1.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

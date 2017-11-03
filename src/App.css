@@ -1,0 +1,230 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  width: calc(100% - 4rem);
+  height: 4rem;
+  background-color: rgb(0, 122, 201);
+}
+
+.header>h1 {
+  color: white;
+  line-height: 0;
+  margin-left: 1rem;
+  font-weight: 400;
+}
+
+.logo-icon {
+  width: 30px;
+}
+
+.content {
+  padding: 2rem;
+  max-width: 600px;
+  width: calc(100% - 4rem);
+}
+
+.clock {
+  font-size: calc(2rem + (26 - 14) * ((100vw - 30rem) / (1600 - 300)));
+  color: white;
+  margin-left: auto;
+}
+
+.clock>i {
+  padding-right: 0.5rem;
+}
+
+.big-apple-container {
+  margin-top: 2rem;
+  margin-bottom: 50px;
+}
+
+.departures {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto 1fr auto;
+}
+
+.departures>span {
+  padding: 0.2rem 0.6rem;
+}
+
+.grid-header {
+  font-weight: bold;
+}
+
+.header-times {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.real-time-arrow {
+  stroke: rgb(0, 122, 201);
+  color: rgb(0, 122, 201);
+}
+
+.real-time {
+  margin-left: 0.4rem;
+}
+
+.real-time, .time-left {
+  color: #46b32a;
+  position: relative;
+}
+
+.route-number {
+  color: rgb(0, 122, 201);
+  font-weight: 600;
+}
+
+.real-time-icon {
+  display: inline-block;
+  width: calc(1rem + (12) * ((50vw - 60rem) / (1300)));
+  position: relative;
+  bottom: 1rem;
+}
+
+.footer {
+  position: fixed;
+  height: 50px;
+  bottom: -6px;
+  font-size: 1.6rem;
+  border: 1px solid gray;
+  padding: 0.6rem 0.4rem 2rem;
+  text-align: center;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 2px rgba(224,224,224,1);
+  -moz-box-shadow: 0px 0px 5px 2px rgba(224,224,224,1);
+  box-shadow: 0px 0px 5px 2px rgba(224,224,224,1);
+  background-color: white;
+  width: calc(100% - 4rem);
+  margin: 0 20px;
+}
+
+.footer:active {
+  background-color: #eef1f3;
+}
+
+/* Copied from reittiopas.fi */
+
+@-webkit-keyframes realtimeInnerArch {
+  0% {
+    opacity: 1
+  }
+
+  20% {
+    opacity: 1
+  }
+
+  40% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes realtimeInnerArch {
+  0% {
+    opacity: 1
+  }
+
+  20% {
+    opacity: 1
+  }
+
+  40% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes realtimeOuterArch {
+  0% {
+    opacity: 1
+  }
+
+  20% {
+    opacity: 1
+  }
+
+  40% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes realtimeOuterArch {
+  0% {
+    opacity: 1
+  }
+
+  20% {
+    opacity: 1
+  }
+
+  40% {
+    opacity: 0
+  }
+
+  60% {
+    opacity: 0
+  }
+
+  80% {
+    opacity: 1
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+#icon-icon_realtime path {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: step-start;
+  animation-timing-function: step-start;
+  fill: currentColor
+}
+
+#icon-icon_realtime path.path1 {
+  -webkit-animation-name: realtimeInnerArch;
+  animation-name: realtimeInnerArch
+}
+
+#icon-icon_realtime path.path2 {
+  -webkit-animation-name: realtimeOuterArch;
+  animation-name: realtimeOuterArch
+}
